@@ -25,6 +25,15 @@ feature 'user adds manufacturer', %q{
     expect(page).to have_content 'Manufacturer was successfully added'
     expect(Manufacturer.count).to eq(prev_count + 1)
   end
+
+  scenario 'invalid manufacturer' do
+    prev_count = Manufacturer.count
+    visit new_manufacturer_path
+
+    click_on 'Add Manufacturer'
+    expect(page).to have_content 'can\'t be blank'
+    expect(Manufacturer.count).to eq(prev_count)
+  end
 end
 
 
