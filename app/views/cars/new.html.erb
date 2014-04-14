@@ -4,8 +4,12 @@
     <%= f.input :color %>
     <%= f.input :year %>
     <%= f.input :mileage%>
+    <%= f.label :manufacturer_id %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name,
+    include_blank: true%><br>
 
     <%= f.submit 'Add Car' %>
   <% end %>
 
 
+<p>Don't see an owner in the list? Add them <a href="/manufacturers/new">here.</a></p>
