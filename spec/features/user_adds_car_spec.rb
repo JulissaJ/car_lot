@@ -19,8 +19,8 @@ feature 'care salesperson adds car', %q{
     prev_count = Car.count
     visit new_car_path
     fill_in 'Color', with: 'red'
-    fill_in 'year', with: '2003'
-    fill_in 'mileage', with: '69,000'
+    fill_in 'Year', with: '2003'
+    fill_in 'Mileage', with: '69000'
 
 
     click_on 'Add Car'

@@ -1,0 +1,11 @@
+<h2>Add a car</h2>
+
+  <%= simple_form_for @car do |f| %>
+    <%= f.input :color %>
+    <%= f.input :year %>
+    <%= f.input :mileage%>
+
+    <%= f.submit 'Add Car' %>
+  <% end %>
+
+
