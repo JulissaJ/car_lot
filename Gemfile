@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
 
+gem 'country_select', '~> 1.3.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

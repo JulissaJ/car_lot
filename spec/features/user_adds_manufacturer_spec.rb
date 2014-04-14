@@ -15,9 +15,9 @@ feature 'user adds manufacturer', %q{
 # If I specify the required information, the manufacturer is recorded and I am redirected to enter another new manufacturer.
 
   scenario 'successfully adds a building' do
-    prev_count = Manfacturer.count
+    prev_count = Manufacturer.count
     visit new_manufacturer_path
-    fill_in 'name', with: 'Tesla'
+    fill_in 'Name', with: 'Tesla'
     select 'United States', from: 'Country'
 
     click_on 'Add Manufacturer'
