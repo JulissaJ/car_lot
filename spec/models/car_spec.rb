@@ -10,4 +10,6 @@ describe Car do
 
   it {should have_valid(:mileage).when('100000')}
   it {should_not have_valid(:mileage).when('dog', nil, '') }
+
+  it {should belong_to (:manufacturer) }
 end
