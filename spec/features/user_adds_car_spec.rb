@@ -16,6 +16,7 @@ feature 'care salesperson adds car', %q{
 # Upon successfully creating a car, I am redirected so that I can create another car.
 
   scenario 'successfully adds a building' do
+
     prev_count = Car.count
     visit new_car_path
     fill_in 'Color', with: 'red'
